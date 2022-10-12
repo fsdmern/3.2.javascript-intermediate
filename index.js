@@ -1,4 +1,4 @@
-//Arrays
+//8a. Arrays
 document.write('<h3>8a. Arrays</h3>');
 //index value -> starts with 0
 document.write('<p><strong>Array Declaration</strong></p>');
@@ -7,6 +7,7 @@ document.write('Value of array: ' + array1 + '<br/>');
 document.write('<p><strong>Add more items to array</strong></p>');
 array1[3] = 'Isvitha';
 array1[4] = 'Adiel';
+array1[5] = 25000;
 document.write('Value of array: ' + array1 + '<br/>');
 
 document.write(
@@ -21,7 +22,7 @@ let len = testArray.length;
 
 document.write('Value of array: ' + testArray + '<br/>');
 
-//Arrays - Methods
+//8b. Arrays - Methods
 document.write('<h3>8b. Array Methods</h3>');
 
 document.write('<p><strong>LENGTH:</strong></p>');
@@ -171,3 +172,80 @@ do {
   m++;
 } while (m <= 25);
 document.write(dwtext);
+
+//SWITCH
+//Example: 1
+// let day = prompt('Enter current day of the week in number format (1-7)');
+// switch (day) {
+//   case '':
+//     alert('Value not entered');
+//     break;
+//   case '1':
+//     alert('Today is Sunday');
+//     break;
+//   case '2':
+//     alert('Today is Monday');
+//     break;
+//   case '3':
+//     alert('Today is Tuesday');
+//     break;
+//   default:
+//     alert('Not a valid value');
+// }
+
+//Example: 2
+// let day = prompt('Enter current day of the week in number format (1-7)');
+// switch (day) {
+//   case '1':
+//   case '2':
+//   case '3':
+//     alert('These are valid days of the week');
+//     break;
+//   default:
+//     alert('Not a valid value');
+// }
+
+//Functions
+document.write('<p><strong>Functions</strong></p>');
+function welcomeAll() {
+  // alert("Good Morning Everyone!!!")
+  document.write('Good Morning Everyone!!!');
+}
+
+welcomeAll();
+
+function welcomePerson(name) {
+  document.write('<br />' + 'Hello ' + name + '!!!');
+}
+
+welcomePerson('Saloni');
+welcomePerson('Mandeep');
+welcomePerson('Isvita');
+
+function areaCircle(radius) {
+  document.write(
+    '<br />' +
+      'Area of circle with a radius ' +
+      radius +
+      ' is : ' +
+      (22 / 7) * radius * radius
+  );
+}
+
+areaCircle(5);
+
+function periCircle(radius) {
+  document.write(
+    '<br />' +
+      'Perimeter of circle with a radius ' +
+      radius +
+      ' is : ' +
+      2 * (22 / 7) * radius
+  );
+}
+
+periCircle(5);
+
+//Square, Rectangle, Triangle, Trapezium, Parallelogram
+//Try use loops in function: I will pass a number.
+//Print upto that number including hat number
