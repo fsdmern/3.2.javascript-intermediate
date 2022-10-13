@@ -246,6 +246,119 @@ function periCircle(radius) {
 
 periCircle(5);
 
+//Example 3
+// let n1 = prompt('Enter the value of n');
+// n1 = parseInt(n1);
+
+// let i = 0;
+// while (i < n1) {
+//   document.write(i);
+//   i++;
+// }
+
 //Square, Rectangle, Triangle, Trapezium, Parallelogram
 //Try use loops in function: I will pass a number.
 //Print upto that number including hat number
+
+//Function Expressions
+//Nornal Function - created in the beginning
+//Can call the function before it is declared
+// sum(45, 12);
+
+// function sum(a, b) {
+//   let result = a + b;
+//   console.log(result);
+//   document.write('<br>' + 'Sum of Two Numbers is: ' + result);
+// }
+
+//Function Expression
+//USE: Can be created/made visible based on satisfying some condition
+//This is created when execution reaches that particular block
+//Can't call the function before it is declared
+let add = function (a, b) {
+  let result = a + b;
+  console.log(result);
+};
+add(20, 33);
+
+let subt = function (a, b) {
+  let result = a - b;
+  console.log(result);
+};
+
+let a,
+  b = (25, 30);
+if (a > b) {
+  let add = function (a, b) {
+    let result = a + b;
+    console.log(result);
+  };
+} else {
+  let subt = function (a, b) {
+    let result = a - b;
+    console.log(result);
+  };
+}
+
+//Another Example for Function Expression
+// let age = prompt('Enter your Age', 0);
+
+// if (age < 18) {
+//   let welcome = function () {
+//     alert('You are a Minor!');
+//   };
+//   welcome();
+// } else {
+//   let welcome = function () {
+//     alert('You are a Major!');
+//   };
+//   welcome();
+// }
+
+// if (age < 18) {
+//   welcome();
+//   function welcome() {
+//     alert('You are a Minor!');
+//   }
+// } else {
+//   welcome();
+//   function welcome() {
+//     alert('You are a Major!');
+//   }
+// }
+
+//use strict mode
+//In the beginning of the JS file we can declare the above statement
+//After ES2016 JS internally enables the use strict and hence explicit declaration not required
+
+//Arrow Functions
+//left hand side: variable declaration
+//Right hand side: Arrow function
+//(a,b) => passing the variable
+//a+b => desired computation part or expression
+let sum = (a, b) => a + b; //+, -, *,/,%, **
+//alert(sum(37, 19));
+
+//Can keep/remove brackets if you are passing only one variable
+let bonus = (sal) => sal * 0.2;
+//alert('Your bonus is:' + bonus(50000));
+
+//No variable getting passed. Only returning some message
+let hello = () => 'This is just a message from Arrow function';
+// alert(hello());
+
+//Multiline Arrow functions : We need to use curly braces
+let mySum = (m, n) => {
+  let result = m + n;
+  document.write('<br>' + 'Sum of m+n is: ' + result);
+};
+
+mySum(5, 9);
+
+//Another example of Arrow function
+// let poll = (question, yes, no) => (confirm(question) ? yes() : no());
+// poll(
+//   'Do you want breakfast?',
+//   () => alert('I want'),
+//   () => alert('I dont want')
+// );
