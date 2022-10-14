@@ -174,6 +174,8 @@ do {
 document.write(dwtext);
 
 //SWITCH
+document.write('<p><strong>SWITCH Statement</strong></p>');
+
 //Example: 1
 // let day = prompt('Enter current day of the week in number format (1-7)');
 // switch (day) {
@@ -261,6 +263,7 @@ periCircle(5);
 //Print upto that number including hat number
 
 //Function Expressions
+document.write('<p><strong>Function Expressions</strong></p>');
 //Nornal Function - created in the beginning
 //Can call the function before it is declared
 // sum(45, 12);
@@ -328,10 +331,12 @@ if (a > b) {
 // }
 
 //use strict mode
+document.write('<p><strong>use strict mode</strong></p>');
 //In the beginning of the JS file we can declare the above statement
 //After ES2016 JS internally enables the use strict and hence explicit declaration not required
 
 //Arrow Functions
+document.write('<p><strong>Arrow Functions</strong></p>');
 //left hand side: variable declaration
 //Right hand side: Arrow function
 //(a,b) => passing the variable
@@ -362,3 +367,156 @@ mySum(5, 9);
 //   () => alert('I want'),
 //   () => alert('I dont want')
 // );
+
+//Objects
+document.write('<p><strong>Objects</strong></p>');
+let sampleObject = {firstName: '', lastName: ''};
+let user = new Object();
+user = {name: 'Saloni', age: 25};
+document.write(user);
+document.write(
+  '<br>' + 'User Name: ' + user.name + ' ' + 'User Age: ' + user.age
+);
+user.isAdmin = true;
+user.isGraduate = true;
+
+document.write(
+  '<br>' +
+    'User Name: ' +
+    user.name +
+    ' ' +
+    'User Age: ' +
+    user.age +
+    ' ' +
+    'Is Admin: ' +
+    user.isAdmin +
+    ' ' +
+    'Is Graduate: ' +
+    user.isGraduate
+);
+
+document.write(
+  '<p><strong>How to access multi word key Ex: "my favourite food"</strong></p>'
+);
+//How to access multi word key in Object ex: "my favourite food"
+let anyUser = {
+  name: 'John',
+  age: 30,
+  'like birds': true,
+};
+document.write(
+  '<p><strong>To access multiword keys, we have to put them in quotes and use square bracket</strong></p>'
+);
+//To access multiword keys, we have to put them in quotes and use square bracket
+// alert('Like birds?: ' + anyUser['like birds']);
+
+document.write(
+  '<p><strong>Adding key, Reading Keys, Deleting Keys in Objects</strong></p>'
+);
+//Adding key, Reading Keys, Deleting Keys
+//Add key
+anyUser['my favourite food'] = 'Dosa';
+//Read key
+document.write(
+  '<br>' +
+    'Reading myfavouritefood key using square brackets: ' +
+    anyUser['my favourite food'] +
+    '<br>'
+);
+//Delete key
+delete anyUser['like birds'];
+
+//variables starting with number not permitted
+//variables can start with $ and _
+
+//Accessing keys via square braces at run time
+// let key = prompt('What do you want to know about the user ?', "name");
+// alert(user[key]);
+
+//Assign value to an object at run time
+// let fruit = prompt('Which fruit do you like ?', 'Mango');
+let fruitBasket = {};
+fruitBasket.fruit = 10;
+// fruitBasket.fruit = 5;
+document.write('My Fruits: ' + fruitBasket.fruit);
+
+document.write('<p><strong>Looping of Objects</strong></p>');
+
+//Looping of Objects
+let myUser = {
+  name: 'ABC User',
+  age: 30,
+  isAdmin: true,
+  isGraduate: true,
+};
+
+for (let key in myUser) {
+  // alert(key);
+  // alert(key + ': ' + myUser[key]);
+}
+
+document.write('<p><strong>Ordering of elements in Objects</strong></p>');
+
+let myList = {
+  37: 'ABC User',
+  22: 30,
+  45: true,
+  2: true,
+};
+
+// for (let xyz in myList) {
+//   alert(xyz);
+// }
+
+document.write('<p><strong>Object Methods & this word</strong></p>');
+//Object methods & this
+let xUser = {
+  name: 'John',
+  age: 30,
+};
+
+document.write(
+  '<p><strong>Add additional key, value pair or another attribute to the object</strong></p>'
+);
+//Add additional key, value pair or another attribute to the object
+xUser.isAdmin = true;
+
+document.write(
+  '<p><strong>When we add function as a propety to the object then it becomes a method</strong></p>'
+);
+//Add a method to the object.
+//When we add function as a propety to the object then it becomes a method
+xUser.sayHello = function () {
+  // alert('Hello!');
+};
+xUser.sayHello();
+
+document.write('<p><strong>To print key and value of an object</strong></p>');
+//To print key and value of an object
+for (let key in xUser) {
+  // alert(key + ': ' + xUser[key]);
+}
+
+//Shorthand to add a method to user
+let yUser = {
+  sayHello() {
+    // alert('I am a method from yUser Object');
+  },
+};
+
+yUser.sayHello();
+for (let key in yUser) {
+  // alert(key + ': ' + yUser[key]);
+}
+
+document.write('<p><strong>This key word in object</strong></p>');
+//this keyword in javascript
+let zUser = {
+  name: 'John',
+  age: '30',
+  printName: function () {
+    // alert('I am from zUser printing the name using this: ' + this.name);
+  },
+};
+
+zUser.printName();
