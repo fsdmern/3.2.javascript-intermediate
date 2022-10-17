@@ -1,137 +1,8 @@
-//8a. Arrays
-document.write('<h3>8a. Arrays</h3>');
-//index value -> starts with 0
-document.write('<p><strong>Array Declaration</strong></p>');
-let array1 = ['Ramu', 'Mandeep', 'Saloni'];
-document.write('Value of array: ' + array1 + '<br/>');
-document.write('<p><strong>Add more items to array</strong></p>');
-array1[3] = 'Isvitha';
-array1[4] = 'Adiel';
-array1[5] = 25000;
-document.write('Value of array: ' + array1 + '<br/>');
-
-document.write(
-  '<p><strong>Array declation with let testArray = "new Array()"</strong></p>'
-);
-let testArray = new Array();
-testArray[0] = 'Apple';
-testArray[1] = 'Umbrella';
-testArray[2] = 'Zebra';
-testArray[3] = 'Cat';
-let len = testArray.length;
-
-document.write('Value of array: ' + testArray + '<br/>');
-
-//8b. Arrays - Methods
-document.write('<h3>8b. Array Methods</h3>');
-
-document.write('<p><strong>LENGTH:</strong></p>');
-document.write('Length of array: ' + testArray.length + '<br/>');
-
-document.write('<p><strong>SORT</strong></p>');
-document.write('Sort of the array: ' + testArray.sort() + '<br/>');
-
-document.write('<p><strong>REVERSE</strong></p>');
-document.write('Sort - Reverse of the array: ' + testArray.reverse() + '<br/>');
-
-document.write('<p><strong>POP - Removes last item of array</strong></p>');
-document.write('Value of array before pop: ' + testArray + '<br/>');
-document.write('Popped Item: ' + testArray.pop() + '<br/>');
-document.write('Value of array after pop: ' + testArray + '<br/>');
-
-document.write(
-  '<p><strong>PUSH - Adds new item into the array towards the end</strong></p>'
-);
-document.write('Push - A new item: ' + testArray.push('Elephant') + '<br/>');
-document.write('Display Array: ' + testArray + '<br/>');
-
-document.write(
-  '<p><strong>UNSHIFT - Add new item to the beginning of array </strong></p>'
-);
-let arrayUnshift = [1, 2, 3];
-document.write('Display Array befote unshift: ' + arrayUnshift + '<br/>');
-arrayUnshift.unshift(0);
-document.write(
-  'Display Array after array.unshift(0): ' + arrayUnshift + '<br/>'
-);
-arrayUnshift.unshift(-1, -2);
-document.write(
-  'Display Array after array.unshift(-1,-2): ' + arrayUnshift + '<br/>'
-);
-
-//splice(start,delteCount, newitem1, newitem2, newitem3..)
-document.write(
-  '<p><strong>SPLICE - (add items to any part of array)</strong></p>'
-);
-document.write(
-  '<p><strong>splice(start,delteCount, newitem1, newitem2, newitem3..)</strong></p>'
-);
-let monthArray = ['Jan', 'Mar', 'Apr', 'Jun'];
-document.write('Display Array: ' + monthArray + '<br/>');
-
-document.write('<p><strong>Add Feb to array</strong></p>');
-document.write(
-  'Display Spliced Array: ' + monthArray.splice(1, 0, 'Feb') + '<br/>'
-);
-document.write('Display Array: ' + monthArray + '<br/>');
-
-document.write(
-  '<p><strong>Add May, Jul, Aug after 4th Index to array</strong></p>'
-);
-document.write(
-  'Display Spliced Array: ' +
-    monthArray.splice(4, 1, 'May', 'Jul', 'Aug') +
-    '<br/>'
-);
-document.write('Display Spliced Array: ' + monthArray + '<br/>');
-
-const arr = ['a', 'b', 'd'];
-document.write('Display Alphabet Array: ' + arr + '<br/>');
-
-arr.splice(2, 0, 'c');
-document.write('Display Spliced Array: ' + arr + '<br/>');
-
-//Slice
-document.write(
-  '<p><strong>SLICE: (start,end) (returns part of array)</strong></p>'
-);
-document.write(
-  '<p><strong>slice(start,end) START: includes the value in the specified index, END: excludes the value in the specified index</strong></p>'
-);
-const games = [
-  'running',
-  'jogging',
-  'football',
-  'swimming',
-  'badminton',
-  'basketball',
-  'volleyball',
-];
-document.write('Display games Array: ' + games + '<br/>');
-document.write(
-  'Display sliced animal games animals.slice(2): ' + games.slice(2) + '<br/>'
-);
-document.write(
-  'Display sliced games array games.slice(2,4): ' + games.slice(2, 4) + '<br/>'
-);
-document.write(
-  'Display sliced games array games.slice(3,6): ' + games.slice(3, 6) + '<br/>'
-);
-document.write(
-  'Display sliced games array games.slice(-2): ' + games.slice(-2) + '<br/>'
-);
-
-document.write(
-  'Display sliced games array games.slice(2,-1): ' +
-    games.slice(2, -1) +
-    '<br/>'
-);
-
-//Loops
-document.write('<h3>9. Loops</h3>');
+//11. Loops
+document.write('<h3>11. Loops</h3>');
 
 //For
-document.write('<p><strong>9a. For Loop</strong></p>');
+document.write('<p><strong>11a. For Loop</strong></p>');
 let myMonths = ['Jan', 'Mar', 'Apr', 'Jun'];
 document.write('Length: ' + myMonths + '<br/>');
 document.write('Length: ' + myMonths.length + '<br/>');
@@ -141,7 +12,7 @@ for (i = 0; i < myMonths.length; i++) {
 }
 
 //While Loop
-document.write('<p><strong>9b. While Loop</strong></p>');
+document.write('<p><strong>11b. While Loop</strong></p>');
 document.write('<p><strong>Simple While Loop</strong></p>');
 let text = '';
 let n = 0;
@@ -163,7 +34,7 @@ while (i < 30) {
 }
 
 //Do While
-document.write('<p><strong>9c. Do While Loop</strong></p>');
+document.write('<p><strong>11c. Do While Loop</strong></p>');
 let dwtext = '';
 let m = 12;
 
@@ -174,7 +45,7 @@ do {
 document.write(dwtext);
 
 //SWITCH
-document.write('<p><strong>SWITCH Statement</strong></p>');
+document.write('<p><strong>12. SWITCH Statement</strong></p>');
 
 //Example: 1
 // let day = prompt('Enter current day of the week in number format (1-7)');
@@ -208,7 +79,7 @@ document.write('<p><strong>SWITCH Statement</strong></p>');
 // }
 
 //Functions
-document.write('<p><strong>Functions</strong></p>');
+document.write('<p><strong>13a. Functions</strong></p>');
 function welcomeAll() {
   // alert("Good Morning Everyone!!!")
   document.write('Good Morning Everyone!!!');
@@ -263,7 +134,7 @@ periCircle(5);
 //Print upto that number including hat number
 
 //Function Expressions
-document.write('<p><strong>Function Expressions</strong></p>');
+document.write('<p><strong>13b. Function Expressions</strong></p>');
 //Nornal Function - created in the beginning
 //Can call the function before it is declared
 // sum(45, 12);
@@ -336,7 +207,7 @@ document.write('<p><strong>use strict mode</strong></p>');
 //After ES2016 JS internally enables the use strict and hence explicit declaration not required
 
 //Arrow Functions
-document.write('<p><strong>Arrow Functions</strong></p>');
+document.write('<p><strong>13c. Arrow Functions</strong></p>');
 //left hand side: variable declaration
 //Right hand side: Arrow function
 //(a,b) => passing the variable
@@ -369,7 +240,7 @@ mySum(5, 9);
 // );
 
 //Objects
-document.write('<p><strong>Objects</strong></p>');
+document.write('<p><strong>14. Objects</strong></p>');
 let sampleObject = {firstName: '', lastName: ''};
 let user = new Object();
 user = {name: 'Saloni', age: 25};
@@ -520,3 +391,245 @@ let zUser = {
 };
 
 zUser.printName();
+
+//15a.Strings
+document.write('<h3>15a. String</h3>');
+let myText = 'My name is xyz';
+let myNewText = 'My name is xyz' + ' abc';
+let myNewText1 = 'My name is xyz' + ' abc' + '123';
+//\', \"
+let myNewTextWithN = 'This is \n "Java Script" \n String \n Section';
+let myNewTextWithoutN = 'This is "Java Script" String Section';
+console.log(myNewTextWithN);
+console.log(myNewTextWithoutN);
+document.write('<br>' + myNewText);
+document.write('<br>' + myNewText1);
+let length = myText.length;
+
+//Escape characters
+// \n - new line character, \r carriage, \b - backspace, \t - tab
+let printn = 5;
+for (i = 0; i < printn; i++) {
+  console.log('printing numbers: ' + i);
+}
+
+//Comparions: =, ==, ===
+
+//15b. String Methods
+document.write('<h3>15b. String Methods</h3>');
+let stringMethod = 'My name is xyz';
+let myLength = stringMethod.length;
+
+//Extract part of a string
+document.write('<h3>Extract Part of String</h3>');
+//slice(start,end), substring(start,end), substr(start, length)
+let str = 'Monitor, Keyboard, Mouse';
+let strPart = str.slice(12, 16);
+document.write('This is a small part of string slice(12,16): ' + strPart);
+let strPart1 = str.slice(-10, -3);
+document.write(
+  '<br>' + 'This is a small part of string slice(12,16): ' + strPart1
+);
+
+//Substring
+//In case of substring start and end values that are less than zero will be treated as zero
+let str1 = 'Today is a holdiay';
+let partSub = str1.substring(7, 13);
+document.write('<br>' + 'This part of string substring(7,13): ' + partSub);
+
+//substr(start, length)
+//First param: element position+1, Second Param: No of characters from the element postion
+let str2 = 'Today is a holdiay';
+let partSubStr = str1.substr(5, 10);
+document.write('<br>' + 'This part of string substring(5,10): ' + partSubStr);
+
+//String Search - PRACTICE
+//indexOf(), lastIndexOf(), startsWith(), endsWith()
+let strSearch = 'A year has 365 days';
+document.write(
+  '<br>' + "strSearch.indexOf('has'): " + strSearch.indexOf('has')
+);
+
+//Try rest of the string search methods
+
+//16a. Number
+document.write('<h3>16a. Numbers</h3>');
+let floatValue = 3.14;
+let intValue = 5;
+let expValue = 15e5;
+let expValueNegative = 15e-5;
+document.write('<br>' + 'Float Value: ' + floatValue);
+document.write('<br>' + 'Integer Value: ' + intValue);
+document.write('<br>' + 'Exponential Value: ' + expValue);
+document.write('<br>' + 'Exponential Negative Value: ' + expValueNegative);
+
+//Adding of Number
+//If beginning is a string, concatenation result will be result
+let addNum1 = '20' + 10 + 50;
+document.write(
+  '<br>' + 'Adding Number with string in the beinning: ' + addNum1
+);
+
+//If end is a string, concatenation result will be number part will be summed and added to string
+let addNum2 = 45 + 10 + '60' + '70';
+document.write('<br>' + 'Adding Number with string in the end: ' + addNum2);
+
+//Try string operations for division - /, multiplication (ex: "100"/25)
+
+//16b. Number Methods
+document.write('<h3>16b. Number Methods</h3>');
+let myNumber = 25780;
+//Covert to number
+myNumber.toString();
+myNumber.toExponential();
+
+//Fixed upto Decimal Places with rounding
+let myFloatNumber = 3.1456789;
+document.write(
+  '<br>' +
+    'Get fixed decimals places myFloatNumber.toFixed(4): ' +
+    myFloatNumber.toFixed(3)
+);
+
+// myFloatNumber = 5.145678;
+// document.write('<br>' + 'myFloatNumber: ' + myFloatNumber);
+
+//Result Number will be of Fixed Length rounded off excluding decimal charater
+myFloatNumber = 9.145678897;
+document.write(
+  '<br>' +
+    'Get fixed decimals places myFloatNumber.toPrecision(7): ' +
+    myFloatNumber.toPrecision(7)
+);
+
+//Convert String to Numbers - PRACTICE
+//Number() - Number, parseInt() - Integer, parseFloat() - Number with decimal places
+
+//17. Arrays
+document.write('<h3>17a. Arrays</h3>');
+//index value -> starts with 0
+document.write('<p><strong>Array Declaration</strong></p>');
+let array1 = ['Ramu', 'Mandeep', 'Saloni'];
+document.write('Value of array: ' + array1 + '<br/>');
+document.write('<p><strong>Add more items to array</strong></p>');
+array1[3] = 'Isvitha';
+array1[4] = 'Adiel';
+array1[5] = 25000;
+document.write('Value of array: ' + array1 + '<br/>');
+
+document.write(
+  '<p><strong>Array declation with let testArray = "new Array()"</strong></p>'
+);
+let testArray = new Array();
+testArray[0] = 'Apple';
+testArray[1] = 'Umbrella';
+testArray[2] = 'Zebra';
+testArray[3] = 'Cat';
+let len = testArray.length;
+
+document.write('Value of array: ' + testArray + '<br/>');
+
+//17b. Arrays - Methods
+document.write('<h3>17b. Array Methods</h3>');
+
+document.write('<p><strong>LENGTH:</strong></p>');
+document.write('Length of array: ' + testArray.length + '<br/>');
+
+document.write('<p><strong>SORT</strong></p>');
+document.write('Sort of the array: ' + testArray.sort() + '<br/>');
+
+document.write('<p><strong>REVERSE</strong></p>');
+document.write('Sort - Reverse of the array: ' + testArray.reverse() + '<br/>');
+
+document.write('<p><strong>POP - Removes last item of array</strong></p>');
+document.write('Value of array before pop: ' + testArray + '<br/>');
+document.write('Popped Item: ' + testArray.pop() + '<br/>');
+document.write('Value of array after pop: ' + testArray + '<br/>');
+
+document.write(
+  '<p><strong>PUSH - Adds new item into the array towards the end</strong></p>'
+);
+document.write('Push - A new item: ' + testArray.push('Elephant') + '<br/>');
+document.write('Display Array: ' + testArray + '<br/>');
+
+document.write(
+  '<p><strong>UNSHIFT - Add new item to the beginning of array </strong></p>'
+);
+let arrayUnshift = [1, 2, 3];
+document.write('Display Array befote unshift: ' + arrayUnshift + '<br/>');
+arrayUnshift.unshift(0);
+document.write(
+  'Display Array after array.unshift(0): ' + arrayUnshift + '<br/>'
+);
+arrayUnshift.unshift(-1, -2);
+document.write(
+  'Display Array after array.unshift(-1,-2): ' + arrayUnshift + '<br/>'
+);
+
+//splice(start,delteCount, newitem1, newitem2, newitem3..)
+document.write(
+  '<p><strong>SPLICE - (add items to any part of array)</strong></p>'
+);
+document.write(
+  '<p><strong>splice(start,delteCount, newitem1, newitem2, newitem3..)</strong></p>'
+);
+let monthArray = ['Jan', 'Mar', 'Apr', 'Jun'];
+document.write('Display Array: ' + monthArray + '<br/>');
+
+document.write('<p><strong>Add Feb to array</strong></p>');
+document.write(
+  'Display Spliced Array: ' + monthArray.splice(1, 0, 'Feb') + '<br/>'
+);
+document.write('Display Array: ' + monthArray + '<br/>');
+
+document.write(
+  '<p><strong>Add May, Jul, Aug after 4th Index to array</strong></p>'
+);
+document.write(
+  'Display Spliced Array: ' +
+    monthArray.splice(4, 1, 'May', 'Jul', 'Aug') +
+    '<br/>'
+);
+document.write('Display Spliced Array: ' + monthArray + '<br/>');
+
+const arr = ['a', 'b', 'd'];
+document.write('Display Alphabet Array: ' + arr + '<br/>');
+
+arr.splice(2, 0, 'c');
+document.write('Display Spliced Array: ' + arr + '<br/>');
+
+//Slice
+document.write(
+  '<p><strong>SLICE: (start,end) (returns part of array)</strong></p>'
+);
+document.write(
+  '<p><strong>slice(start,end) START: includes the value in the specified index, END: excludes the value in the specified index</strong></p>'
+);
+const games = [
+  'running',
+  'jogging',
+  'football',
+  'swimming',
+  'badminton',
+  'basketball',
+  'volleyball',
+];
+document.write('Display games Array: ' + games + '<br/>');
+document.write(
+  'Display sliced animal games animals.slice(2): ' + games.slice(2) + '<br/>'
+);
+document.write(
+  'Display sliced games array games.slice(2,4): ' + games.slice(2, 4) + '<br/>'
+);
+document.write(
+  'Display sliced games array games.slice(3,6): ' + games.slice(3, 6) + '<br/>'
+);
+document.write(
+  'Display sliced games array games.slice(-2): ' + games.slice(-2) + '<br/>'
+);
+
+document.write(
+  'Display sliced games array games.slice(2,-1): ' +
+    games.slice(2, -1) +
+    '<br/>'
+);
